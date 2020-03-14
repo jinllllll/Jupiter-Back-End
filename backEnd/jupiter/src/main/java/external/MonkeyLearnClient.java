@@ -47,6 +47,7 @@ public class MonkeyLearnClient {
 			response = ml.extractors.extract("ex_YCya9nrn", text, extraParams);
 			JSONArray resultArray = response.arrayResult;
 			return getKeywords(resultArray);
+			
 		} catch (MonkeyLearnException e) {// it¡¯s likely to have an exception
 			e.printStackTrace();
 		}

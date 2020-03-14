@@ -117,7 +117,6 @@ public class GitHubClient {
 			builder.setImageUrl(getStringFieldOrEmpty(object, "company_logo"));
 			
 			Set<String> set = new HashSet<>(keywords.get(i));
-			
 			builder.setKeywords(set);
 			
 			Item item = builder.build();
