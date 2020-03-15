@@ -6,7 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Item {
-	//1.private field (read only) 只读的，没有public setter，只有一次赋值机会， 就是调用构造函数的时候
+	//1.private field (read only) 只读的immutable，没有public setter，只有一次赋值机会， 就是调用构造函数的时候
 	private String itemId;
 	private String name;
 	private String address;
@@ -57,7 +57,7 @@ public class Item {
 	
 	
 	//用构造函数的话，input的顺序不能变，而且都要给才能construct，用builder pattern就不用
-	//有一些variable不能改的话，就要用builder pattern
+	//有一些variable不能改的话immutable，就要用builder pattern
 	//都可以改的话，可以用空constructor，然后public setter
 	//inner class 才能调用item的build方法
 	//static： 静态了，不依赖于对象了
